@@ -22,7 +22,6 @@ const Create = () => {
         },
       })
       .then((res) => {
-        // alert("Data Berhsil Disimpan");
         navigate("/");
       })
       .catch((err) => {

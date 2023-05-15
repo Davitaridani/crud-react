@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { urlApi } from "../utils/api";
 import { BsTrash3Fill, BsPencilSquare } from "react-icons/bs";
 import { BiPlus, BiSearchAlt2 } from "react-icons/bi";
-import imgProduct from "../assets/img/produk-1.jpg";
-import Swal from "sweetalert2";
 
 const Table = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-
+  const navigate = useNavigate();
   const [search, setSearch] = useState(products);
-
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPage = 5;
   const lastIndex = currentPage * recordsPage;
@@ -37,24 +34,45 @@ const Table = () => {
       });
   };
 
-  const handleRemove = async (id) => {
-    await fetch(`http://localhost:3002/products/${id}`, {
-      method: "delete",
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          setProducts(
-            products.filter((products) => {
-              return products.id !== id;
-            })
-          );
-        } else {
-          return;
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  // const handleRemove = async (id) => {
+  //   await axios
+  //     .delete(`http://localhost:3002/products/${id}`)
+  //     .then((res) => {
+  //       if (res.status === 200) {
+  //         setProducts(
+  //           records.filter((item) => {
+  //             return item.id !== id;
+  //           })
+  //         );
+  //       } else {
+  //         return;
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+
+  const handleRemove = (id) => {
+    if (window.confirm("Are you sure ?")) {
+      axios
+        .delete(`http://localhost:3002/products/${id}`)
+        .then((res) => {
+          if (res.status === 200) {
+            setProducts(
+              records.filter((item) => {
+                return item.id !== id;
+              })
+            );
+          }
+          alert("success");
+          window.location.reload();
+          navigate("/");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   const handleSearch = (e) => {
@@ -100,15 +118,15 @@ const Table = () => {
                 </div>
               </div>
             </div>
-            <table className="table table-bordered">
+            <table className="table table-bordered table-striped table-responsive">
               <thead className="text-white">
                 <tr>
                   <td className="text-center">ID</td>
                   <td>Foto</td>
                   <td>Nama Produk</td>
-                  <td>Harga Beli</td>
-                  <td>Harga Jual</td>
-                  <td>Stok</td>
+                  <td className="text-end">Harga Jual</td>
+                  <td className="text-end">Harga Beli</td>
+                  <td className="text-center">Stok</td>
                   <td className="text-center">Action</td>
                 </tr>
               </thead>
@@ -126,9 +144,9 @@ const Table = () => {
                         Foto
                       </td>
                       <td>{item.nama}</td>
-                      <td>{item.hargaJual}</td>
-                      <td>{item.hargaBeli}</td>
-                      <td>{item.stok}</td>
+                      <td className="text-end">Rp. {item.hargaJual}</td>
+                      <td className="text-end">Rp. {item.hargaBeli}</td>
+                      <td className="text-center">{item.stok}</td>
                       <td className="d-flex justify-content-center align-items-center gap-2 item-btns">
                         <Link
                           to={`/update/${item.id}`}

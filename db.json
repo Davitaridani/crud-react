@@ -2,31 +2,80 @@
   "products": [
     {
       "id": 1,
-      "nama": "Davitaa",
-      "hargaJual": "1222",
-      "hargaBeli": "1",
-      "stok": "12"
+      "nama": "Leptop",
+      "hargaJual": "8500000",
+      "hargaBeli": "8200000",
+      "stok": "20"
     },
     {
-      "nama": "Ani",
-      "hargaJual": "11",
-      "hargaBeli": "11",
-      "stok": "11",
-      "id": 5
+      "id": 2,
+      "nama": "Mouse",
+      "hargaJual": "85000",
+      "hargaBeli": "75000",
+      "stok": "20"
     },
     {
-      "nama": "Dini",
-      "hargaJual": "11",
-      "hargaBeli": "11",
-      "stok": "11",
-      "id": 7
+      "id": 3,
+      "nama": "Keyboard",
+      "hargaJual": "200000",
+      "hargaBeli": "180000",
+      "stok": "20"
+    },
+    {
+      "id": 4,
+      "nama": "Monitor",
+      "hargaJual": "3500000",
+      "hargaBeli": "3300000",
+      "stok": "5"
+    },
+    {
+      "id": 6,
+      "nama": "Earphone",
+      "hargaJual": "250000",
+      "hargaBeli": "230000",
+      "stok": "22"
+    },
+    {
+      "id": 7,
+      "nama": "Kamera",
+      "hargaJual": "7000000",
+      "hargaBeli": "6500000",
+      "stok": "7"
+    },
+    {
+      "id": 8,
+      "nama": "Ram 8 ",
+      "hargaJual": "450000",
+      "hargaBeli": "340000",
+      "stok": "8"
     },
     {
       "id": 9,
-      "nama": "Leptop",
-      "hargaJual": "6000000",
-      "hargaBeli": "5500000",
-      "stok": "10"
+      "nama": "Hard Disk",
+      "hargaJual": "550000",
+      "hargaBeli": "440000",
+      "stok": "8"
+    },
+    {
+      "nama": "Mouse Pad",
+      "hargaJual": "12000",
+      "hargaBeli": "10000",
+      "stok": "5",
+      "id": 10
+    },
+    {
+      "nama": "Bracket",
+      "hargaJual": "340000",
+      "hargaBeli": "320000",
+      "stok": "3",
+      "id": 11
+    },
+    {
+      "nama": "Coling Pad ",
+      "hargaJual": "50000",
+      "hargaBeli": "44000",
+      "stok": "23",
+      "id": 12
     }
   ]
 }
