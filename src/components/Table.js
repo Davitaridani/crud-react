@@ -78,7 +78,9 @@ const Table = () => {
   const handleSearch = (e) => {
     const searchValue = e.target.value;
     setSearch(
-      products.filter((item) => item.nama.toLowerCase().includes(searchValue))
+      products.filter((item) =>
+        item.nama.toLowerCase().includes(searchValue.toLowerCase())
+      )
     );
   };
 
