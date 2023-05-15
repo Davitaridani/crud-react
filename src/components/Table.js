@@ -121,7 +121,7 @@ const Table = () => {
             <table className="table table-bordered table-striped table-responsive">
               <thead className="text-white">
                 <tr>
-                  <td className="text-center">ID</td>
+                  <td className="text-center">No</td>
                   <td>Foto</td>
                   <td>Nama Produk</td>
                   <td className="text-end">Harga Jual</td>
