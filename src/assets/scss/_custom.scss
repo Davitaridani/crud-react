@@ -1,0 +1,115 @@
+@import "global";
+
+$blue1: #3b7197;
+$blue2: #4a8db7;
+$blue3: #74bde0;
+$blue4: #a1e1fa;
+
+$green: #46a094;
+
+.text-loading {
+	text-align: center;
+	padding-top: 50px;
+}
+
+.container {
+	.title {
+		h1 {
+			text-align: center;
+		}
+	}
+}
+
+// Table
+.container {
+	.row {
+		.items-table {
+			.btn-add {
+				background-color: $blue1;
+				color: #fff;
+			}
+			.input-group {
+				input {
+					box-shadow: none;
+					
+				}
+				.input-group-text {
+					padding: 6px 10px;
+					svg {
+						font-size: 20px;
+					}
+				}
+			}
+			.table {
+				thead {
+					background-color: #4b5563;
+				}
+				tbody {
+					tr {
+						td {
+							img {
+								width: 100px;
+								height: 100px;
+							}
+							.btn-update {
+								background-color: #4a8db7;
+								color: #fff;
+								border: 0;
+							}
+							button {
+								background-color: $green;
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Form Add & Update Data
+.container {
+	.form-add, .form-update {
+		border: 1px solid #cfcfcf;
+		border-radius: 5px;
+		padding: 25px;
+		form {
+			input {
+				box-shadow: none;
+				
+				&:focus {
+					border:1px solid #3b7197;
+				}
+			}
+			.items-btn {
+				button {
+					background-color: $blue1;
+				}
+				a {
+					background-color: $blue3;
+				}
+			}
+		}
+	}
+}
+
+// Pagination
+.pagination {
+	li {
+		cursor: pointer;
+		.btn-prev {
+			&:focus {
+				box-shadow: none;
+			}
+		}
+		
+	}
+	.active {
+		a {
+			background-color: $blue1 !important;
+			border-color: $blue1 !important;
+		} 
+	}
+
+}

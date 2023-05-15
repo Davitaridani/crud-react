@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nama": "Davitaa",
+      "hargaJual": "1222",
+      "hargaBeli": "1",
+      "stok": "12"
+    },
+    {
+      "nama": "Ani",
+      "hargaJual": "11",
+      "hargaBeli": "11",
+      "stok": "11",
+      "id": 5
+    },
+    {
+      "nama": "Dini",
+      "hargaJual": "11",
+      "hargaBeli": "11",
+      "stok": "11",
+      "id": 7
+    },
+    {
+      "id": 9,
+      "nama": "Leptop",
+      "hargaJual": "6000000",
+      "hargaBeli": "5500000",
+      "stok": "10"
+    }
+  ]
+}
